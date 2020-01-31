@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <style>
+        .content2{
+            height: 30%;
+            width: 100%;
+            margin-top: -650px;
+            margin-left: 370px;
+            width: 250px;
+            overflow-y: scroll;
+        }
+        ul{
+            list-style-type: null;
+        }
+        .head{
+          
+            margin-left: 400;
+            
+        }
+        </style>
+    </head>
+    <body>
+        <div class="content-1">
+        <img src="smart-watch.jpg">
+    </div>
+    <div class="head">
+    <h2></h2>
+    <p id="clock"></p>
+</div>
+    <div class="content2">
+        <li>
+            <ul>
+        <h3 id="btn1">C</h3>
+        <p id="content1">C is a general-purpose, procedural computer programming language supporting structured programming.</p>
+       </ul>
+    <ul>
+        <h3 id="btn2">C++</h3>
+        <p id="content2">C++ is regarded as a middle-level language, as it comprises a combination of both high-level and low-level language features.</p>
+    </ul>
+<ul>
+        <h3 id="btn3">Java</h3>
+        <p id="content3">Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented.</p>
+    </ul>
+    </li> </div>
+    <div class="icon" style="margin-top: 30px;margin-left: 410px;">
+        <a href="index.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i>
+        </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="message.html"><i class="fa fa-envelope fa-2x" aria-hidden="true" id="i1"></i></i></a>
+        <a href="music.html"><i class="fa fa-music fa-2x" aria-hidden="true" id="i2"></i></i></a>
+        <a href="timer.html"><i class="fa fa-clock-o fa-2x" aria-hidden="true" id="i3"></i></i></i></a>
+    </div>
+
+        <script>
+            $("p").hide();
+           $(document).ready(function(){
+               $("#btn1").click(function(){
+                   $("#content1").toggle();
+               });
+               $("#btn2").click(function(){
+                   $("#content2").toggle();
+               });
+               $("#btn3").click(function(){
+                   $("#content3").toggle();
+               });
+           });   
+        function showTime() {
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        var session = "AM";
+        if (h == 0) {
+            h = 12;
+        }
+        if (h > 12) {
+            h = h - 12;
+        }
+    
+        if (h < 10) {
+            h = "0" + h;
+        }
+    
+        if (m < 10) {
+            m = "0" + m;
+        }
+        if (s < 10) {
+            s = "0" + s;
+        }
+    
+    
+        var time = h + ":" + m + ":" + s + ":" + session;   
+        document.getElementById("clock").innerHTML = time;   
+        setTimeout(showTime, 1000);
+    
+    }
+    showTime();
+    
+</script>
+    </body>
+</html>

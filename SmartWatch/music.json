@@ -1,0 +1,44 @@
+{
+    "songs": [
+          {
+            "name": "Unakkaga vaazha Ninaikiren",
+            "singer": "Sreekanth Hariharan",
+            "file": "Unakkaga.mp3",
+            "map": "bigil.jpg"
+          },
+            {
+                "name": "Munbe Vaa",
+                "singer": "Shreya Ghoshal",
+                "file": "Munbevaa.mp3",
+                "map": "munbe.jpg"
+            },
+            {
+                "name": "Melliname",
+                "singer": "Harish",
+                "file": "Melliname.mp3",
+                "map": "shajahan.jpg"
+            },
+            {
+              "name": "NeeyumNaanum",
+              "singer": "Jithin Raj",
+              "file": "NeeyumNaanum.mp3",
+              "map":"neeyum.jpg"
+            }
+            
+    ]
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

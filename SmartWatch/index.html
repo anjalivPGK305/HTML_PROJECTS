@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title></title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+     <style>
+     #clock{
+         margin-left: 450px;
+         margin-top: -600px;
+     }
+     #da{
+         margin-left: 450px;
+     }
+     .icon{
+         margin-left: 450px;
+         margin-top: 100px;
+     }
+     </style>
+</head>
+
+<body>
+    <div class="main" style="margin-top: -150px; margin-left: 150px;">
+        <img src="smart-watch.jpg">
+
+        <div class="td">
+            <p id="clock"></p>
+            <p id="date"></p>
+        </div>
+        <div class="dd">
+            <p id="da"></p>
+        </div>
+        <div class="icon">
+            <a href="message.html"><i class="fa fa-envelope fa-2x" aria-hidden="true" id="i1"></i></i></a>
+            <a href="music.html"><i class="fa fa-music fa-2x" aria-hidden="true" id="i2"></i></i></a>
+            <a href="timer.html"><i class="fa fa-clock-o fa-2x" aria-hidden="true" id="i3"></i></i></i></a>
+        </div>
+
+    </div>
+    <script>
+    function showTime() {
+        var date = new Date();
+        var h = date.getHours();
+        var m = date.getMinutes();
+        var s = date.getSeconds();
+        var session = "AM";
+        var z = date.getDay();
+        var x = date.getMonth();
+        var y = date.getFullYear();
+        if (h == 0) {
+            h = 12;
+        }
+        if (h > 12) {
+            h = h - 12;
+        }
+    
+        if (h < 10) {
+            h = "0" + h;
+        }
+    
+        if (m < 10) {
+            m = "0" + m;
+        }
+        if (s < 10) {
+            s = "0" + s;
+        }
+    
+    
+        var time = h + ":" + m + ":" + s + ":" + session;   
+        document.getElementById("clock").innerHTML = time;   
+        setTimeout(showTime, 1000);
+    
+    }
+    showTime();
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    
+    document.getElementById("da").innerHTML = dd + '/' + mm + '/' + yyyy;
+</script>
+    
+
+
+
+</body>
+
+</html>
