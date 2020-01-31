@@ -1,0 +1,109 @@
+
+<html>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <center>
+    
+        <head>
+            <style>
+                .body {
+                    display: grid;
+                    grid-template-columns: auto auto;
+                    display: cover;
+                    background-color: blue;
+                    height: 100%;
+                }
+                
+                .content-1 {
+                    background-color: skyblue;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    padding-top: 10%;
+                }
+                
+                #head1 {
+                    color: white;
+                }
+                
+                #head2 {
+                    color: black;
+                }
+                
+                .content-2 {
+                    background-color: ghostwhite;
+                    width: 100%;
+                    height: 100%;
+                }
+                
+                #para {
+                    color: white;
+                    /* margin: 10px 20px 10px 20px; */
+                }
+                
+                #txt {
+                    border-radius: 1px;
+                    border-color: ghostwhite;
+                }
+                
+                .right {
+                    padding-top: 50%;
+                }
+                
+                .show {
+                    padding-top: 10%;
+                    font-size: large;
+                    color: black;
+                }
+                
+                .content {
+                    margin: 10%;
+                    color: white;
+                    /* background-color: brown; */
+                }
+            </style>
+        </head>
+    
+    
+        <div class="body">
+            <div class="content-1">
+                <h1><label id="head1"><b>Weather</b></label> <label id="head2">App</b></label></h1>
+                <!-- <h1 id="head2"><b> App</b></h1> -->
+                <div class="content">
+                    Build a simple UI that shows the weather of a city that is<br> entered by the user.Use HTML,CSS and JavaScript to<br> acheive this. Requirements :
+                    <br> 1)Current date and time <br> 2)Weather can be random<br> 3)Temparature
+                    <br>
+                </div>    
+            </div>
+            <div class="content-2">
+                <h1>
+                    <div id="show">
+    
+                    </div>
+                </h1>
+                <div id="show1">
+                </div>
+                <div id="show2">
+                </div>
+                <h1>
+                    <div id="show3">
+    
+                    </div>
+                    <img id="icon" src="" alt="">
+                    <!-- <div id="icon"></div> -->
+                </h1>
+    
+                <div class="right">
+                    Enter city Name:<input type="text" name="text" id="txt" placeholder="Eg: City / State">
+                    <input type="submit" value="Submit" id="btn" class="btn btn-primary">
+                </div>   
+            </div>    
+        </div>   
+        <script src="weather.js"></script>
+        <br><br>
+    
+    </center>
+    
+    </html>
